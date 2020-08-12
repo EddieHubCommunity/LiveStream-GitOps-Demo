@@ -38,7 +38,7 @@ The following software needs to be installed prior to using the repository.
  The following supporting documents have been added:
  
 1. [What is GitOps?](docs/what-is-gitops.md)
-2. [How does this repo work?]()
+2. [How does this repo work?](docs/hows-does-this-repo-work.md)
  
 ## Authors
 
