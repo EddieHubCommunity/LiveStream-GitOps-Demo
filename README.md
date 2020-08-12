@@ -1,4 +1,4 @@
-# EddieBotGitOps
+# From app to Kubernetes with GitOps
 
 The purpose of this repository is to show how you can take a plain NodeJS application, package it up as a docker container and deploy it to a local Kubernetes cluster using GitOps.
 
