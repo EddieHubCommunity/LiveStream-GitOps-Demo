@@ -2,6 +2,8 @@
 
 The purpose of this repository is to show how you can take a plain NodeJS application, package it up as a docker container and deploy it to a local Kubernetes cluster using GitOps.
 
+This will be demoed on a live stream **Thursday the 13th of August 2020**, [youtube link here](https://www.youtube.com/watch?v=oIemUNSU9Lw), come and join the discussion.
+
 ## Prerequisites 
 
 The following software needs to be installed prior to using the repository.
