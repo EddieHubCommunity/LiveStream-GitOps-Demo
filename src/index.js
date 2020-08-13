@@ -7,7 +7,7 @@ const LIGHTSHIP_PORT = process.env.health_port || 9000;
 const app = express();
 
 app.get('/', (req, res) => {
-  const bgColor = process.env.BG || "#f8f9fa";
+  const bgColor = process.env.BG || "#999";
   // WARNING - XSS dream lies below - this should only be used for demo purposes
   // language=HTML
   res.send(

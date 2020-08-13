@@ -5,6 +5,9 @@ metadata:
   namespace: example-node-app
   labels:
     name: example-node-app
+  annotations:
+    fluxcd.io/automated: "true"
+    fluxcd.io/tag.livestream-gitops-demo: semver:~1.1
 spec:
   replicas: 3
   strategy:

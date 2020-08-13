@@ -16,7 +16,7 @@ install-flux:
 
 APP_NAME=livestream-gitops-demo
 IMG_REGISTRY=docker.io/eddiejaoude
-VERSION=1.1.1
+VERSION=1.1.2
 IMG_NAME=$(IMG_REGISTRY)/$(APP_NAME):$(VERSION)
 
 build:
