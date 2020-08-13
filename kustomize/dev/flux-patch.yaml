@@ -1,0 +1,14 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example-node-app
+  namespace: example-node-app
+spec:
+  template:
+    spec:
+      $setElementOrder/containers:
+      - name: livestream-gitops-demo
+      containers:
+      - image: docker.io/eddiejaoude/livestream-gitops-demo:1.1.2
+        name: livestream-gitops-demo
