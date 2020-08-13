@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example-node-app
+  namespace: example-node-app
+  labels:
+    name: example-node-app
+spec:
+  replicas: 3
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  minReadySeconds: 30
+  selector:
+    matchLabels:
+      app_name: example-node-app
+      app_version: 1.1.1
+  template:
+    metadata:
+      labels:
+        app_name: example-node-app
+        app_version: 1.1.1
+    spec:
+      containers:
+        - name: livestream-gitops-demo
+          image: docker.io/eddiejaoude/livestream-gitops-demo:1.1.1
+          ports:
+            - containerPort: 3000
+          # is the container online (e.g. has it booted successfully?)
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 9000
+            initialDelaySeconds: 30
+            timeoutSeconds: 10
+          # is the container ready to receive traffic?
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 9000
+            initialDelaySeconds: 30
+            timeoutSeconds: 10
