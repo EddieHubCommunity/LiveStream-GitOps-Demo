@@ -10,5 +10,5 @@ spec:
       $setElementOrder/containers:
       - name: livestream-gitops-demo
       containers:
-      - image: docker.io/eddiejaoude/livestream-gitops-demo:1.1.2
+      - image: docker.io/eddiejaoude/livestream-gitops-demo:1.1.3
         name: livestream-gitops-demo
